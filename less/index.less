@@ -1,15 +1,89 @@
-html {
-    display: block;
+body {
+    background: #23acf4;
 }
 
-container {
-    width: 100%;
-    height: 100%;
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    margin-top: 10%;
+    color: black;
+    text-decoration: underline;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -100px;
+    background: #98dafd;
+    width: 300px;
+    height: 200px;
+    animation-name: banner;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+    h1 {
+        border-top: 1px solid black;
+    }
+}
+.line {
+    position:absolute;
+    width: 100px;
+    height: 30%;
+    bottom: 0px;
+    left: 50%;
+    border-left: solid 6px black;
+    animation-name: banner;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}
+
+container {
+    background: #ffffff;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10% auto auto 10%;
+    opacity: 0;
+    animation-name: content;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    nav {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0;
+        animation-name: content;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        z-index: 500;
+        a {
+            text-decoration: none;
+            color: darkgray;
+        }
+        a:hover {
+            color: #98dafd;
+        }
+    }
+    .screenshots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        // @media (max-width:500px) {
+        //     flex-direction: column;
+        // }
+    }
     button {
         opacity: 0;
         animation-name: content;
@@ -17,6 +91,7 @@ container {
         animation-delay: 3s;
         animation-fill-mode: forwards;
         z-index: 500;
+        width: 200px;
     }
     figure {
         opacity: 0;
@@ -29,98 +104,6 @@ container {
         animation-fill-mode: forwards;
         z-index: 500;
     }
-    .banner {
-        border: 1px solid blue;
-        display: flex;
-        justify-content: center;
-        color: lightgray;
-        position: absolute;
-        top: 40%;
-        background: black;
-        margin: auto;
-        width: 300px;
-        height: 200px;
-        animation-name: banner;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-        z-index: 500;
-        .top {
-            width: 100%;
-            height: 50px;
-            .outerTopRight {
-                width: 50px;
-                height: 50px;
-                border-top: 2px solid black;
-                border-right: 2px solid black;
-                // margin: 0 0 100% 100%;
-                position: relative;
-                top: 0;
-                right: 0;
-            }
-            .outerTopLeft {
-                background: red;
-                width: 50px;
-                height: 50px;
-                border-top: 2px solid black;
-                border-left: 2px solid black;
-                // margin: 0 100% 100% 0;
-                position: relative;
-                top: 0;
-                left: 0;
-            }
-        }
-        .middle {
-            width: 100%;
-            height: 100px;
-            .inner {
-                width: 200px;
-                height: 100px;
-                background: black;
-                margin: auto;
-            }
-        }
-        .bottom {
-            width: 100%;
-            height: 50px;
-            .outerBottomLeft {
-                width: 50px;
-                height: 50px;
-                border-bottom: 2px solid black;
-                border-left: 2px solid black;
-                // margin: 100% 100% 0 0;
-                position: relative;
-                bottom: 0;
-                left: 0;
-            }
-            .outerBottomLeft {
-                width: 50px;
-                height: 50px;
-                border-bottom: 2px solid black;
-                border-right: 2px solid black;
-                // margin: 100% 0 0 100%;
-                position: relative;
-                bottom: 0;
-                right: 0;
-            }
-        }    
-        
-    }
-    .line {
-        position:absolute;
-        width: 100px;
-        height: 300px;
-        bottom: 0px;
-        left: 45%;
-        border-right: solid 6px black;
-        animation-name: banner;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-        z-index: 500;
-    }
 }
 
 @keyframes banner {
@@ -129,6 +112,7 @@ container {
     }
     100% {
         opacity: 0;
+        display: none;
     }
 }
 
