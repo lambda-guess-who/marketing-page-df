@@ -1,5 +1,6 @@
 body {
     background: #23acf4;
+    font-family: 'Roboto', sans-serif;
 }
 
 .banner {
@@ -23,7 +24,8 @@ body {
     animation-fill-mode: forwards;
     z-index: 999;
     h1 {
-        border-top: 1px solid black;
+        border-top: 1px solid #f0f0f0;
+        color: #f0f0f0
     }
 }
 .line {
@@ -56,6 +58,7 @@ container {
     animation-delay: 3s;
     animation-fill-mode: forwards;
     nav {
+        padding: 10px 0;
         width: 50%;
         display: flex;
         flex-direction: row;
@@ -75,6 +78,12 @@ container {
             color: #98dafd;
         }
     }
+    h3 {
+        border-top: 2px solid black;
+        text-decoration: underline;
+        padding-top: 5px;
+        text-align: center;
+    }
     .screenshots {
         display: flex;
         justify-content: center;
@@ -92,17 +101,29 @@ container {
         animation-fill-mode: forwards;
         z-index: 500;
         width: 200px;
+        background: yellow;
+        border: 3px solid blue;
+        border-radius: 40%;
+        padding: 10px 0 10px 0;
+        margin-bottom: 20px;
     }
     figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         opacity: 0;
         width: 250px;
-        height: 400px;
-        background: blue;
+        height: auto;
+        // background: blue;
         animation-name: content;
         animation-duration: 1s;
         animation-delay: 3s;
         animation-fill-mode: forwards;
         z-index: 500;
+        img {
+            width: 250px;
+        }
     }
 }
 
