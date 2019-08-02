@@ -70,9 +70,20 @@ container nav {
   animation-fill-mode: forwards;
   z-index: 500;
 }
+@media (max-width: 500px) {
+  container nav {
+    flex-direction: column;
+  }
+}
 container nav a {
   text-decoration: none;
   color: darkgray;
+}
+@media (max-width: 500px) {
+  container nav a {
+    padding: 20px 0;
+    border-top: 1px solid black;
+  }
 }
 container nav a:hover {
   color: #98dafd;
